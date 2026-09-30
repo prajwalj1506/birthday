@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>Nocturne Cabinet</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+
+    <!-- ======================================================================
+         1. OPENING SCREEN
+         ====================================================================== -->
+    <section id="screen-opening" class="screen active" aria-label="Opening Screen">
+      <div class="opening-halo">
+        <div class="opening-halo-circle"></div>
+      </div>
+      <div class="editorial-container" style="min-height: 80vh; justify-content: space-between; align-items: center;">
+        <div style="height: 1px;"></div>
+        <div class="opening-content">
+          <div class="opening-title-row">
+            <h1 class="opening-title">ALIEN.</h1>
+            <span class="blinking-cursor"></span>
+          </div>
+          <p class="opening-sub-1">Are you there?</p>
+          <p class="opening-sub-2">I made something for you.</p>
+        </div>
+        <div class="opening-action">
+          <button id="btn-enter" class="btn-primary" type="button">ENTER</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         2. WELCOME SCREEN
+         ====================================================================== -->
+    <section id="screen-welcome" class="screen" aria-label="Welcome Screen">
+      <div class="editorial-container" style="min-height: 80vh; justify-content: space-between; align-items: center;">
+        <div class="welcome-content">
+          <h1 id="welcome-item-1" class="welcome-title anim-fade-item">WELCOME, ALIEN.</h1>
+          <p id="welcome-item-2" class="welcome-subtitle anim-fade-item">Before you say "sure"...</p>
+          <div id="welcome-item-3" class="welcome-accent-block anim-fade-item">
+            <span class="welcome-accent-text">Yes.</span>
+            <div class="welcome-accent-line"></div>
+          </div>
+          <p id="welcome-item-4" class="welcome-caption anim-fade-item">I actually made this.</p>
+        </div>
+        <div id="welcome-item-5" class="welcome-action anim-fade-item">
+          <button id="btn-start" class="btn-start" type="button">START</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         3. THE FILES (ARCHIVE INDEX)
+         ====================================================================== -->
+    <section id="screen-the-files" class="screen screen-scrollable" aria-label="The Files Archive Index">
+      <div class="files-archive-container">
+        <header class="files-header">
+          <h1 id="files-heading" class="files-title anim-fade-item">THE FILES</h1>
+          <div class="files-header-line"></div>
+        </header>
+
+        <div class="file-registry">
+          <button class="file-node anim-fade-item" data-file="1" type="button">
+            <span class="file-node-num">01</span>
+            <span class="file-node-title">THE ALIEN</span>
+          </button>
+          <div class="file-node-divider"></div>
+
+          <button class="file-node anim-fade-item" data-file="2" type="button">
+            <span class="file-node-num">02</span>
+            <span class="file-node-title">LADY BOSS</span>
+          </button>
+          <div class="file-node-divider"></div>
+
+          <button class="file-node anim-fade-item" data-file="3" type="button">
+            <span class="file-node-num">03</span>
+            <span class="file-node-title">PEDHUU HUCHII &amp; MONSTER BABY</span>
+          </button>
+          <div class="file-node-divider"></div>
+
+          <button class="file-node anim-fade-item" data-file="4" type="button">
+            <span class="file-node-num">04</span>
+            <span class="file-node-title">THE FIGHTS</span>
+          </button>
+          <div class="file-node-divider"></div>
+
+          <button class="file-node anim-fade-item" data-file="5" type="button">
+            <span class="file-node-num">05</span>
+            <span class="file-node-title">THE THINGS SHE LOVES</span>
+          </button>
+          <div class="file-node-divider"></div>
+
+          <button class="file-node anim-fade-item" data-file="6" type="button">
+            <span class="file-node-num">06</span>
+            <span class="file-node-title">THINGS I REMEMBER</span>
+          </button>
+          <div class="file-node-divider"></div>
+
+          <button class="file-node anim-fade-item" data-file="7" type="button">
+            <span class="file-node-num">07</span>
+            <span class="file-node-title">THE REASON</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         4. FILE 01: THE ALIEN
+         ====================================================================== -->
+    <section id="screen-file-01" class="screen screen-file screen-scrollable" aria-label="File 01: The Alien">
+      <div class="screen-file-header">
+        <button class="file-back-trigger" data-action="archive" aria-label="Return to The Files">‹</button>
+      </div>
+      <div class="editorial-container pt-safe">
+        <header class="file-section-header anim-fade-item">
+          <span class="file-tag" data-action="archive">01</span>
+          <h1 class="file-heading">THE ALIEN</h1>
+          <div class="file-header-rule"></div>
+        </header>
+
+        <div style="display: flex; flex-direction: column; gap: var(--space-lg); margin-top: var(--space-md);">
+          <p class="text-headline-sm anim-fade-item" style="font-weight: 300;">The most innocent girl I know.</p>
+          <div class="anim-fade-item" style="padding-left: var(--space-md);">
+            <p class="text-headline-sm text-italic" style="color: rgba(230, 225, 228, 0.8);">Probably.</p>
+          </div>
+          <p class="text-body-lg anim-fade-item">Because somehow that innocent girl has one of the darkest minds I've ever encountered.</p>
+
+          <div class="anim-fade-item" style="display: flex; flex-direction: column; gap: var(--space-sm); padding-top: var(--space-xs);">
+            <p class="text-body-lg">She talks. A lot.</p>
+            <p class="text-body-lg text-variant">Sometimes about the most stupid things imaginable.</p>
+            <p class="text-body-lg text-variant">Sometimes in a way that somehow makes me feel like a kid.</p>
+          </div>
+
+          <div class="anim-fade-item" style="display: flex; flex-direction: column; gap: var(--space-sm);">
+            <p class="text-body-lg">She loves sarcasm.</p>
+            <p class="text-body-lg">She loves dark and creepy things.</p>
+            <p class="text-body-lg">And somehow she can make the word “sure” sound suspicious.</p>
+          </div>
+
+          <div class="anim-fade-item" style="margin-top: var(--space-lg);">
+            <p class="text-headline-md">Definitely an alien.</p>
+            <div class="file-header-rule"></div>
+          </div>
+        </div>
+
+        <div class="file-nav-footer">
+          <button class="file-next-trigger" data-action="next" aria-label="Next file">→</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         5. FILE 02: LADY BOSS
+         ====================================================================== -->
+    <section id="screen-file-02" class="screen screen-file screen-scrollable" aria-label="File 02: Lady Boss">
+      <div class="screen-file-header">
+        <button class="file-back-trigger" data-action="archive" aria-label="Return to The Files">‹</button>
+      </div>
+      <div class="editorial-container pt-safe">
+        <header class="file-section-header anim-fade-item">
+          <span class="file-tag" data-action="archive">02</span>
+          <h1 class="file-heading">LADY BOSS</h1>
+          <div class="file-header-rule"></div>
+        </header>
+
+        <div style="display: flex; flex-direction: column; gap: var(--space-lg); margin-top: var(--space-md);">
+          <div class="anim-fade-item" style="display: flex; flex-direction: column; gap: 0.35rem;">
+            <p class="text-headline-sm">You scold me.</p>
+            <p class="text-body-md text-italic text-variant" style="font-weight: 300;">Usually because I deserve it.</p>
+          </div>
+
+          <div class="anim-fade-item" style="display: flex; flex-direction: column; gap: 0.35rem;">
+            <p class="text-headline-sm">You correct me.</p>
+            <p class="text-body-md text-italic text-variant" style="font-weight: 300;">Even when i repeat the mistakes again and again</p>
+          </div>
+
+          <div class="anim-fade-item" style="display: flex; flex-direction: column; gap: 0.35rem;">
+            <p class="text-headline-sm">You appreciate me.</p>
+            <p class="text-body-md text-italic text-variant" style="font-weight: 300;">And somehow that makes me want to do better.</p>
+          </div>
+
+          <div class="anim-fade-item" style="display: flex; flex-direction: column; gap: 0.35rem;">
+            <p class="text-headline-sm">You motivate me.</p>
+            <p class="text-body-md text-italic text-variant" style="font-weight: 300;">More than you probably realize.</p>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: var(--space-sm); margin-top: var(--space-lg); padding-bottom: var(--space-md);">
+            <div class="anim-fade-item">
+              <p class="text-display-lg">You stay.</p>
+            </div>
+            <div class="anim-fade-item" style="display: flex; flex-direction: column; align-items: flex-start; gap: 0.75rem;">
+              <p class="text-body-lg text-italic text-variant" style="font-weight: 300;">Even after everything.</p>
+              <div class="file-header-rule" style="width: 32px;"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="file-nav-footer">
+          <button class="file-next-trigger" data-action="next" aria-label="Next file">→</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         6. FILE 03: PEDHUU HUCHII & MONSTER BABY
+         ====================================================================== -->
+    <section id="screen-file-03" class="screen screen-file screen-scrollable" aria-label="File 03: Pedhuu Huchii &amp; Monster Baby">
+      <div class="screen-file-header">
+        <button class="file-back-trigger" data-action="archive" aria-label="Return to The Files">‹</button>
+      </div>
+      <div class="editorial-container pt-safe" style="text-align: center;">
+        <header class="file-section-header centered anim-fade-item">
+          <span class="file-tag" data-action="archive">03</span>
+          <h1 class="file-heading">PEDHUU HUCHII &amp; MONSTER BABY</h1>
+          <div class="file-header-rule centered" style="width: 64px;"></div>
+          <p class="text-body-md text-variant anim-fade-item" style="margin-top: var(--space-sm); font-weight: 300;">The names we somehow ended up calling each other.</p>
+        </header>
+
+        <div style="display: flex; flex-direction: column; align-items: center; margin-top: var(--space-lg);">
+          <span class="anim-fade-item" style="font-family: var(--font-body); font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--on-surface-variant);">You call me:</span>
+          <div class="nickname-group">
+            <span class="nickname-item anim-fade-item">Sir.</span>
+            <span class="nickname-item anim-fade-item">Monster baby.</span>
+            <span class="nickname-item anim-fade-item">Idiot.</span>
+          </div>
+
+          <div class="hairline-divider anim-fade-item" style="width: 48px; margin: var(--space-lg) auto;"></div>
+
+          <span class="anim-fade-item" style="font-family: var(--font-body); font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--on-surface-variant);">I call you:</span>
+          <div class="nickname-group">
+            <span class="nickname-item anim-fade-item">Alien.</span>
+            <span class="nickname-item anim-fade-item">Huchii.</span>
+            <span class="nickname-item anim-fade-item">Pedhuu.</span>
+            <span class="nickname-item anim-fade-item">Lady Boss.</span>
+          </div>
+
+          <div class="anim-fade-item" style="margin-top: var(--space-xl); display: flex; flex-direction: column; align-items: center;">
+            <div style="width: 6px; height: 6px; border-radius: 50%; background-color: var(--primary-container); margin-bottom: var(--space-md); opacity: 0.8;"></div>
+            <p class="text-headline-sm text-italic" style="max-width: 360px; line-height: 32px;">Somehow, all of these became normal.</p>
+          </div>
+        </div>
+
+        <div class="file-nav-footer">
+          <button class="file-next-trigger" data-action="next" aria-label="Next file">→</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         7. FILE 04: THE FIGHTS
+         ====================================================================== -->
+    <section id="screen-file-04" class="screen screen-file screen-scrollable" aria-label="File 04: The Fights">
+      <div class="screen-file-header">
+        <button class="file-back-trigger" data-action="archive" aria-label="Return to The Files">‹</button>
+      </div>
+      <div class="editorial-container pt-safe">
+        <header class="file-section-header anim-fade-item">
+          <span class="file-tag" data-action="archive">04</span>
+          <h1 class="file-heading">THE FIGHTS</h1>
+          <div class="file-header-rule"></div>
+        </header>
+
+        <div style="display: flex; flex-direction: column; gap: var(--space-lg); margin-top: var(--space-md);">
+          <div class="anim-fade-item" style="display: flex; flex-direction: column; gap: var(--space-xs);">
+            <p class="text-body-lg">We fight.</p>
+            <p class="text-body-lg">A lot.</p>
+          </div>
+
+          <div class="anim-fade-item" style="display: flex; flex-direction: column; gap: var(--space-xs);">
+            <p class="text-headline-sm text-italic text-variant" style="font-weight: 300;">And if we're being honest...</p>
+            <p class="text-body-lg" style="color: rgba(230, 225, 228, 0.8);">Most of the time, it's my fault.</p>
+          </div>
+
+          <div class="anim-fade-item" style="display: flex; flex-direction: column; gap: var(--space-xs);">
+            <p class="text-body-lg">I've hurt you.</p>
+            <p class="text-body-lg" style="color: rgba(230, 225, 228, 0.75);">More than anyone.</p>
+            <p class="text-body-lg">And I know that.</p>
+          </div>
+
+          <div class="hairline-divider anim-fade-item" style="margin: var(--space-md) 0;"></div>
+
+          <div class="anim-fade-item" style="display: flex; flex-direction: column; gap: var(--space-md);">
+            <p class="text-headline-sm text-italic" style="color: var(--secondary);">But somehow, after all of that...</p>
+            <p class="text-display-lg">We're still here.</p>
+            <div style="display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-xs);">
+              <p class="text-headline-sm text-italic" style="color: rgba(230, 225, 228, 0.95);">That's something I love about us.</p>
+              <div class="file-header-rule" style="width: 75%;"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="file-nav-footer">
+          <button class="file-next-trigger" data-action="next" aria-label="Next file">→</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         8. FILE 05: THE THINGS SHE LOVES
+         ====================================================================== -->
+    <section id="screen-file-05" class="screen screen-file screen-scrollable" aria-label="File 05: The Things She Loves">
+      <div class="screen-file-header">
+        <button class="file-back-trigger" data-action="archive" aria-label="Return to The Files">‹</button>
+      </div>
+      <div class="editorial-container pt-safe" style="text-align: center;">
+        <header class="file-section-header centered anim-fade-item">
+          <span class="file-tag" data-action="archive">05</span>
+          <h1 class="file-heading">THE THINGS SHE LOVES</h1>
+          <div class="file-header-rule centered" style="width: 48px;"></div>
+        </header>
+
+        <ul class="loves-list">
+          <li class="loves-item anim-fade-item">COFFEE</li>
+          <li class="loves-item anim-fade-item">BIRYANI</li>
+          <li class="loves-item anim-fade-item">NOVELS</li>
+          <li class="loves-item anim-fade-item">PAKISTANI DRAMAS</li>
+          <li class="loves-item anim-fade-item">FICTIONAL CHARACTERS</li>
+          <li class="loves-item anim-fade-item">VIOLENCE</li>
+          <li class="loves-item anim-fade-item">DARK &amp; CREEPY STUFF</li>
+        </ul>
+
+        <div class="hairline-divider anim-fade-item" style="width: 32px; margin: var(--space-lg) auto;"></div>
+
+        <ul class="loves-list" style="margin-top: 0;">
+          <li class="loves-highlight anim-fade-item">ALEX</li>
+          <li class="loves-highlight anim-fade-item">PATRICK JANE</li>
+        </ul>
+
+        <div class="file-nav-footer">
+          <button class="file-next-trigger" data-action="next" aria-label="Next file">→</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         9. FILE 06: THE THINGS I REMEMBER
+         ====================================================================== -->
+    <section id="screen-file-06" class="screen screen-file screen-scrollable" aria-label="File 06: The Things I Remember">
+      <div class="screen-file-header">
+        <button class="file-back-trigger" data-action="archive" aria-label="Return to The Files">‹</button>
+      </div>
+      <div class="editorial-container pt-safe" style="text-align: center;">
+        <header class="file-section-header centered anim-fade-item">
+          <span class="file-tag" data-action="archive">06</span>
+          <h1 class="file-heading">THE THINGS I REMEMBER</h1>
+          <div class="file-header-rule centered" style="width: 48px;"></div>
+        </header>
+
+        <div style="display: flex; flex-direction: column; gap: var(--space-lg); margin-top: var(--space-md); text-align: center;">
+          <div class="anim-fade-item" style="display: flex; flex-direction: column; gap: var(--space-xs);">
+            <p class="text-body-lg" style="color: rgba(230, 225, 228, 0.85);">I look at you like a kid.</p>
+            <p class="text-body-lg" style="color: rgba(230, 225, 228, 0.75);">You're serious with everyone.</p>
+          </div>
+
+          <div class="anim-fade-item" style="display: flex; flex-direction: column; gap: var(--space-xs); padding: var(--space-sm) 0;">
+            <p class="text-headline-sm text-italic" style="color: var(--primary);">But with me...</p>
+            <p class="text-headline-sm">You're a kid too.</p>
+            <p class="text-body-lg" style="color: rgba(230, 225, 228, 0.9); font-weight: 300; padding-top: var(--space-xs);">And somehow, I'm even more of a kid.</p>
+          </div>
+
+          <div class="hairline-divider anim-fade-item" style="width: 32px; margin: 0 auto;"></div>
+
+          <div class="anim-fade-item" style="display: flex; flex-direction: column; gap: var(--space-xs);">
+            <p class="text-body-md text-variant">You correct the way I talk.</p>
+            <p class="text-body-md text-variant">The way I walk.</p>
+            <p class="text-body-md text-variant">The way I sit.</p>
+            <p class="text-body-md text-variant">The way I eat.</p>
+          </div>
+
+          <div class="anim-fade-item" style="display: flex; flex-direction: column; gap: var(--space-xs);">
+            <p class="text-body-md text-variant">You tell me not to touch my own hair.</p>
+            <p class="text-body-md text-variant">You tell me to make more friends.</p>
+          </div>
+
+          <div class="anim-fade-item" style="display: flex; flex-direction: column; gap: var(--space-md); padding-top: var(--space-sm);">
+            <p class="text-headline-sm text-italic" style="color: var(--primary); opacity: 0.9;">You tell me:</p>
+            <div style="display: flex; flex-direction: column; gap: var(--space-sm);">
+              <p class="text-headline-sm">“Stop doing that.”</p>
+              <p class="text-headline-sm">“If you again do that I won't talk for a week.”</p>
+              <p class="text-headline-sm">“Stop touching your ID card.”</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="file-nav-footer">
+          <button class="file-next-trigger" data-action="next" aria-label="Next file">→</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         10. FILE 07: THE REASON
+         ====================================================================== -->
+    <section id="screen-file-07" class="screen screen-file screen-scrollable" aria-label="File 07: The Reason">
+      <div class="ambient-vignette"></div>
+      <div class="screen-file-header" style="position: relative; z-index: 20;">
+        <button class="file-back-trigger" data-action="archive" aria-label="Return to The Files">‹</button>
+      </div>
+
+      <div class="editorial-container pt-safe" style="position: relative; z-index: 10;">
+        <header class="file-section-header centered anim-fade-item">
+          <span class="file-tag" data-action="archive">07</span>
+          <h1 class="file-heading">THE REASON</h1>
+          <div class="file-header-rule centered" style="width: 48px;"></div>
+        </header>
+
+        <section class="anim-fade-item" style="display: flex; flex-direction: column; gap: var(--space-md); text-align: center; margin: var(--space-md) 0 var(--space-lg);">
+          <p class="text-headline-sm text-italic" style="color: rgba(230, 225, 228, 0.9); font-weight: 300;">I thought about getting you something.</p>
+          <p class="text-body-md text-variant" style="font-weight: 300;">Then I remembered something.</p>
+          <p class="text-body-md" style="color: rgba(230, 225, 228, 0.8); font-weight: 300;">You'd probably give every penny back.</p>
+        </section>
+
+        <!-- Dossier Card -->
+        <div class="dossier-card anim-fade-item">
+          <div class="dossier-card-glow"></div>
+          <div style="display: flex; flex-direction: column; gap: var(--space-xs);">
+            <span style="font-family: var(--font-body); font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--outline);">GIFT PURCHASE ATTEMPT</span>
+            <span style="font-family: var(--font-body); font-size: 12px; font-weight: 600; letter-spacing: 0.08em; color: var(--primary);">STATUS: FAILED</span>
+            <span style="font-family: var(--font-body); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--outline-variant); padding-top: var(--space-xs);">REASON:</span>
+          </div>
+
+          <div class="dossier-logic-box">
+            <p class="text-body-md text-variant" style="font-weight: 300;">I am broke.</p>
+            <p class="text-body-md text-variant" style="font-weight: 300;">You would return the money.</p>
+            <p class="text-body-md" style="color: var(--primary-fixed-dim); font-weight: 400;">Therefore I am still broke.</p>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 0.2rem; padding-top: var(--space-xs); font-size: 13px;">
+            <p class="text-variant" style="opacity: 0.8;">So yeah.</p>
+            <p class="text-variant" style="opacity: 0.8;">I couldn't buy you anything.</p>
+            <p class="text-variant" style="opacity: 0.8;">Not because I didn't want to.</p>
+            <p style="color: rgba(230, 225, 228, 0.9); font-weight: 500;">Mostly because I'm broke.</p>
+          </div>
+        </div>
+
+        <section class="anim-fade-item" style="display: flex; flex-direction: column; align-items: center; text-align: center; margin: var(--space-xl) 0; gap: var(--space-md);">
+          <span class="text-headline-md text-italic" style="color: var(--primary); opacity: 0.95;">But...</span>
+          <div style="display: flex; flex-direction: column; gap: var(--space-sm);">
+            <p class="text-headline-sm" style="font-weight: 400;">I still wanted to give you something.</p>
+            <p class="text-headline-sm text-italic text-variant" style="font-weight: 300;">Something that wouldn't need money.</p>
+            <p class="text-body-lg" style="color: rgba(230, 225, 228, 0.85); font-weight: 300;">Something I could actually make myself.</p>
+          </div>
+          <div style="padding-top: var(--space-md);">
+            <p class="text-headline-md">So I made this.</p>
+          </div>
+        </section>
+
+        <!-- Tapestry Strip -->
+        <div class="tapestry-strip anim-fade-item">
+          <p class="tapestry-text">ALIEN. HUCHII. PEDHUU. LADY BOSS. SIR. MONSTER BABY. SURE. THE FIGHTS. THE STUPID CONVERSATIONS. COFFEE. BIRYANI.</p>
+        </div>
+
+        <section class="anim-fade-item" style="display: flex; flex-direction: column; align-items: center; text-align: center; margin: var(--space-xl) 0; gap: var(--space-sm);">
+          <p class="text-headline-sm text-italic text-variant" style="font-weight: 300; opacity: 0.8;">I couldn't buy you a gift.</p>
+          <p class="text-display-lg" style="font-size: 28px; line-height: 38px;">So I made you a place instead.</p>
+          <div class="file-header-rule centered" style="width: 100%; height: 2px;"></div>
+        </section>
+
+        <nav style="display: flex; justify-content: center; padding-top: var(--space-md); padding-bottom: var(--space-xl);">
+          <button id="btn-file-07-continue" class="btn-continue" type="button">CONTINUE</button>
+        </nav>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         11. FINAL LETTER TO SANJANA
+         ====================================================================== -->
+    <section id="screen-final-letter" class="screen screen-scrollable" aria-label="Final Letter to Sanjana">
+      <div class="final-letter-halos-bg">
+        <div class="final-letter-halo-1"></div>
+        <div class="final-letter-halo-2"></div>
+        <div class="final-letter-halo-3"></div>
+      </div>
+
+      <div class="editorial-container wide pt-safe pb-safe">
+        <article class="final-letter-article">
+          <p class="letter-paragraph">Finally, it's finally your birthday. God i have been waiting for this day since a long time. Anyway........</p>
+
+          <div class="letter-paragraph" style="display: flex; flex-direction: column; gap: var(--space-sm);">
+            <p class="letter-birthday-highlight">HAPPPYYYYYYYYY BIRTHDAYYYYYYYYYY MYYYYYYY PUDHUUUUUUUU ALIENNNNNNNN UUUUUUUUUUUU</p>
+            <p style="font-family: var(--font-body); font-size: 13px; color: var(--outline); font-style: italic;">(the "MYYYYYYY" can be ignored but i suggest you to not ignore it).</p>
+          </div>
+
+          <p class="letter-paragraph">I'm sooo excited. It's your birthday. I know for sure i'm more excited than you. Oyeeee i am more excited on your birthday than my birthday. Hehehehhehehehhehehehhehehehhehehehehe.</p>
+
+          <p class="letter-paragraph">It's been an year since we started talking with eachother. From those stupid figths till those sad moments. We've been together in all the situations. I know you have told me many times to leave you. I know i know. But we are still together. Maybe that's what makes us special. (Try not yo get cringe okay na).</p>
+
+          <p class="letter-paragraph">We've been together when people left you. We've been together in some really bad moments. We've been together in some really good moments tooo. And let's be like this. Together.</p>
+
+          <div class="letter-paragraph letter-callout-box">
+            <p class="letter-callout-text">Because trust me you're the most important person in my life except amma appa. And losing you will tear me apart from the inside. I get panick attack when I think of losing you. You're that special to me sanjana.</p>
+          </div>
+
+          <p class="letter-paragraph">Yes in the future we will fight. I will hurt you. I will screw up things. But also i will sort out things. I will make myself better. I will think in your POV. This is my future promise.</p>
+
+          <p class="letter-paragraph" style="font-family: var(--font-display); font-size: 22px; line-height: 32px; color: var(--primary-fixed-dim);">No matter what happens in the future. We will be together. Okay naaa.</p>
+
+          <p class="letter-paragraph">Because without my huchii alien, monster baby sir is nothing. Okay naaaa. I really wish the best for you. I really wish you will do something in your life. I know you will. You have the capacity to do it.</p>
+
+          <p class="letter-paragraph">I wish from today all your problem should tata bye bye you and happiness should say hiiiii sanjanaaaaaaaaaaaaaaa. I really wish that. I know you're feeling really cringe but handle it okay na because it's your birthday.</p>
+
+          <div class="letter-paragraph" style="padding-top: var(--space-xl); padding-bottom: var(--space-xl);">
+            <p class="letter-final-greeting">Once again alien. Happy birthday to you...</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
